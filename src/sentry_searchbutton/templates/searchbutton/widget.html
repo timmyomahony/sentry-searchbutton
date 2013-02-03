@@ -1,0 +1,21 @@
+<style>
+    ul#searchbutton li > *{
+        margin: 5px 15px;
+    }
+    ul#searchbutton li a{
+        display: inline-block;
+    }
+</style>
+<script>
+    console.log("test")
+    $(document).ready(function() {
+        $('#searchbutton a.btn').click(function(){
+            var query = encodeURIComponent($('#searchbutton input').val());
+            $(this).attr("href", "{{ url }}" + query);        });
+    });
+</script>
+<ul class="nav nav-list" id="searchbutton">
+    <li class="nav-header">Error Search</li>
+    <li><input type=text value="{{ value }}" /></li>
+    <li><a href="#" target="_blank" class="btn btn-primary">Search {{ name }}</a></li>
+</ul>

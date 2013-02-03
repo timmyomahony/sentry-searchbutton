@@ -1,0 +1,3 @@
+include setup.py MANIFEST.in
+recursive-include src/sentry_searchbutton/templates *
+global-exclude *~
